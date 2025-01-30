@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.simplecalculatorapp.ui.theme.MediumGray
 import com.example.simplecalculatorapp.ui.theme.SimpleCalculatorAppTheme
 
@@ -23,7 +24,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SimpleCalculatorAppTheme {
-                val viewModel = viewModels<CalculatorViewModel>()
+                val viewModel = viewModel<CalculatorViewModel>()
                 val state = viewModel.state
                 val buttonSpacing = 8.dp
                 Calculator(
